@@ -14,6 +14,7 @@ install:
 - cp linux-amd64/glide $GOPATH/bin
 script:
 - glide install
+- ./support/scripts/run_tests
 
 before_deploy:
 
