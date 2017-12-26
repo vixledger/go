@@ -1,0 +1,5 @@
+package: github.com/vixledger/go
+import:
+- package: github.com/agl/ed25519
+  version: 278e1ec8e8a6e017cd07577924d6766039146ced
+  repo: https://github.com/agl/ed25519
