@@ -1,7 +1,7 @@
 # VIXAL Go 
-[![Build Status](https://travis-ci.org/vbchain/go.svg?branch=master)](https://travis-ci.org/vbchain/go) 
-[![GoDoc](https://godoc.org/github.com/vbchain/go?status.svg)](https://godoc.org/github.com/vbchain/go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/vbchain/go)](https://goreportcard.com/report/github.com/vbchain/go)
+[![Build Status](https://travis-ci.org/vixledger/go.svg?branch=master)](https://travis-ci.org/vixledger/go) 
+[![GoDoc](https://godoc.org/github.com/vixledger/go?status.svg)](https://godoc.org/github.com/vixledger/go)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vixledger/go)](https://goreportcard.com/report/github.com/vixledger/go)
 
 This repo is the home for all of the public go code produced by VIXAL.  In addition to various tools and services, this repository is the SDK from which you may develop your own applications that integrate with the VIXAL network.
 
@@ -28,7 +28,7 @@ Each of these directories have their own README file that explain further the na
 
 ### Other packages
 
-In addition to the packages described above, this repository contains various packages related to working with the VIXAL network from a go program.  It's recommended that you use [godoc](https://godoc.org/github.com/vbchain/go#pkg-subdirectories) to browse the documentation for each.
+In addition to the packages described above, this repository contains various packages related to working with the VIXAL network from a go program.  It's recommended that you use [godoc](https://godoc.org/github.com/vixledger/go#pkg-subdirectories) to browse the documentation for each.
 
 
 ## Package source layout
