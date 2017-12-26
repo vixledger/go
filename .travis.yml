@@ -1,0 +1,35 @@
+language: go
+services:
+- mysql
+- postgres
+- redis-server
+addons:
+  postgresql: '9.4'
+go:
+- '1.9'
+- tip
+install:
+- wget https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz
+- tar -xzvf glide-v0.12.3-linux-amd64.tar.gz
+- cp linux-amd64/glide $GOPATH/bin
+script:
+- glide install
+- ./support/scripts/run_tests
+before_deploy:
+- go run ./support/scripts/build_release_artifacts/main.go
+matrix:
+  fast_finish: true
+  allow_failures:
+  - go: tip
+notifications:
+deploy:
+  - provider: releases
+    skip_cleanup: true
+    api_key:
+      secure:
+    file: dist/*
+    file_glob: true
+    on:
+      repo: vixledger/go
+      tags: true
+      go: '1.9'
