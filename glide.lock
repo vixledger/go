@@ -1,7 +1,92 @@
 hash: e6cd7d2697adf29cec9db79759403efaa93bb2ef7eff18571f0e9494a9d326ad
-updated: 2017-12-26T14:36:57.871697+08:00
+updated: 2017-12-26T20:58:07.957428+08:00
 imports:
 - name: github.com/agl/ed25519
   version: 278e1ec8e8a6e017cd07577924d6766039146ced
   repo: https://github.com/agl/ed25519
-testImports: []
+- name: github.com/getsentry/raven-go
+  version: c9d3cc542ad199f62c0264286be537f9bce6063c
+- name: github.com/nullstyle/go-xdr
+  version: a875e7c9fa2388ce03279f6b5ba1c2ccd1f9e917
+  subpackages:
+  - xdr3
+- name: github.com/pkg/errors
+  version: 645ef00459ed84a119197bfb8d8205042c6df63d
+testImports:
+- name: github.com/davecgh/go-spew
+  version: 6d212800a42e8ab5c146b8ace3490ee17e5225f9
+  subpackages:
+  - spew
+- name: github.com/onsi/ginkgo
+  version: 6c46eb8334b30dc55b42f1a1c725d5ce97375390
+  subpackages:
+  - config
+  - extensions/table
+  - internal/codelocation
+  - internal/containernode
+  - internal/failer
+  - internal/leafnodes
+  - internal/remote
+  - internal/spec
+  - internal/spec_iterator
+  - internal/specrunner
+  - internal/suite
+  - internal/testingtproxy
+  - internal/writer
+  - reporters
+  - reporters/stenographer
+  - reporters/stenographer/support/go-colorable
+  - reporters/stenographer/support/go-isatty
+  - types
+- name: github.com/onsi/gomega
+  version: d35dcfdbfd01eaabf8da0b6b36f111ff953b68cb
+  subpackages:
+  - format
+  - internal/assertion
+  - internal/asyncassertion
+  - internal/oraclematcher
+  - internal/testingtsupport
+  - matchers
+  - matchers/support/goraph/bipartitegraph
+  - matchers/support/goraph/edge
+  - matchers/support/goraph/node
+  - matchers/support/goraph/util
+  - types
+- name: github.com/pmezard/go-difflib
+  version: d8ed2627bdf02c080bf22230dbb337003b7aba2d
+  subpackages:
+  - difflib
+- name: github.com/stretchr/testify
+  version: 976c720a22c8eb4eb6a0b4348ad85ad12491a506
+  subpackages:
+  - assert
+- name: golang.org/x/net
+  version: d866cfc389cec985d6fda2859936a575a55a3ab6
+  subpackages:
+  - html
+  - html/atom
+  - html/charset
+- name: golang.org/x/sys
+  version: 1f5e250e1174502017917628cc48b52fdc25b531
+  subpackages:
+  - unix
+- name: golang.org/x/text
+  version: 1cbadb444a806fd9430d14ad08967ed91da4fa0a
+  subpackages:
+  - encoding
+  - encoding/charmap
+  - encoding/htmlindex
+  - encoding/internal
+  - encoding/internal/identifier
+  - encoding/japanese
+  - encoding/korean
+  - encoding/simplifiedchinese
+  - encoding/traditionalchinese
+  - encoding/unicode
+  - internal/tag
+  - internal/utf8internal
+  - language
+  - runes
+  - transform
+- name: gopkg.in/yaml.v2
+  version: 7ad95dd0798a40da1ccdff6dff35fd177b5edf40
