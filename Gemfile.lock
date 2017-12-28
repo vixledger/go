@@ -1,6 +1,6 @@
 GIT
-  remote: git://github.com/vixledger/xdrgen.git
-  revision: 1c80a3bf3f2a67ca081a7646ab066c39fa715a38
+  remote: https://github.com/vixledger/xdrgen.git
+  revision: 75ba8a181c236c28a51b19b3b2a5e3ad2bec4352
   specs:
     xdrgen (0.0.1)
       activesupport (~> 5)

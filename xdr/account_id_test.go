@@ -15,23 +15,23 @@ var _ = Describe("xdr.AccountId#Address()", func() {
 
 	It("returns a strkey string when account id is valid", func() {
 		var aid AccountId
-		aid.SetAddress("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH")
+		aid.SetAddress("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I")
 		addy := aid.Address()
-		Expect(addy).To(Equal("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH"))
+		Expect(addy).To(Equal("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I"))
 	})
 })
 
 var _ = Describe("xdr.AccountId#Equals()", func() {
 	It("returns true when the account ids have equivalent values", func() {
 		var l, r AccountId
-		l.SetAddress("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH")
-		r.SetAddress("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH")
+		l.SetAddress("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I")
+		r.SetAddress("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I")
 		Expect(l.Equals(r)).To(BeTrue())
 	})
 
 	It("returns false when the account ids have different values", func() {
 		var l, r AccountId
-		l.SetAddress("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH")
+		l.SetAddress("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I")
 		r.SetAddress("GBTBXQEVDNVUEESCTPUT3CHJDVNG44EMPMBELH5F7H3YPHXPZXOTEWB4")
 		Expect(l.Equals(r)).To(BeFalse())
 	})
@@ -40,7 +40,7 @@ var _ = Describe("xdr.AccountId#Equals()", func() {
 var _ = Describe("xdr.AccountId#LedgerKey()", func() {
 	It("works", func() {
 		var aid AccountId
-		aid.SetAddress("GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH")
+		aid.SetAddress("GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I")
 
 		key := aid.LedgerKey()
 		packed := key.MustAccount().AccountId

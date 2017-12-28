@@ -14,23 +14,23 @@ install:
 - cp linux-amd64/glide $GOPATH/bin
 script:
 - glide install
-- ./support/scripts/run_tests
-
-before_deploy:
-
+- "./support/scripts/run_tests"
+before_deploy: 
 matrix:
   fast_finish: true
   allow_failures:
   - go: tip
 notifications:
+  slack:
+    secure: X3qi+Y3f0/FY//DObl4LCfSCkav/IwjIfjTX300ZDBsf3gSO934NkG97qJ1tnHL7knjIq6Z0kIwNWXqGZ8/NbM7PxpS+LXJlWAfkMm+y1wAsuX1on3JjrZn02fvNO3NwN2MKdO2kSeYHOWpAJZo0va8qg8IfGoRMmisOtZb44JcJcYeHnJwxLSBNAPcqzXTNLekmiAPgEtZue6e0AiQUXKgtJtflb51wlDrMIDbnQwnvlqgXzbb5SrXyNf6pjF/N0LrMaH2tckXvTBXtz+YF8dKzbgihyseYb8cXXyRx8LL4URQwZZRUhA+Ht36/j6ZShyKpVy7XL/XbbFLVLpa4zsamkWM/BzFF79ou9OIUbqFiFHL+Ksi8N0GR1RJAUhS03HhMy9iOjD+lHR/Jneh/PO6cLbwViwqa0koVJ9Ag3W5Ty7MKa3QH/QS09VqnECVIrl3DPi5Crmsh8vWtwd4auKrJc2v1B6RpLANSKSphJL5Xj1TCnVC3luzGLAfm0yJtOd0AUCEltor9ZUIsUhh6skjerUDwdo27cHqivORWV5F7aF65PJUMnvItz3oqnqjBt6Xfq/Gdtdw46LtPVRFTsR9C5WXn7dU+FYNfI1WldSDdh/56uznM5oIp8UfyROsnSW3A/6nKzpCdrrAB/9gcztx3PimfYU9ROGYLV/JuaB0=
 deploy:
-  - provider: releases
-    skip_cleanup: true
-    api_key:
-      secure:
-    file: dist/*
-    file_glob: true
-    on:
-      repo: vixledger/go
-      tags: true
-      go: '1.9'
+- provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: 
+  file: dist/*
+  file_glob: true
+  on:
+    repo: vixledger/go
+    tags: true
+    go: '1.9'

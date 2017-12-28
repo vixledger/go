@@ -8,7 +8,7 @@ import (
 )
 
 var _ = Describe("xdr.AccountEntry#SignerSummary()", func() {
-	const address = "GCR22L3WS7TP72S4Z27YTO6JIQYDJK2KLS2TQNHK6Y7XYPA3AGT3X4FH"
+	const address = "GBMZ7CITNRMRQ3ZFRJP6TIFGVKKE4MH7KCCVRCISHEPSCHFOF4JA767I"
 	var account AccountEntry
 
 	BeforeEach(func() {
@@ -30,8 +30,8 @@ var _ = Describe("xdr.AccountEntry#SignerSummary()", func() {
 
 	It("includes every secondary signer", func() {
 		account.Signers = []Signer{
-			signer("GCNXDL2UN2UOZECXIO3SYDL4FSOLQXBKHKNO4EXKUNY2QBHKNF4K6VKQ", 2),
-			signer("GAYLEWCV7LQBIVL7BLJ7NBYBYVKVFB55JWOQMKJQYQ3LBSXSAVFMYNHS", 4),
+			signer("GDMGDPXGPZ7UMKF6PPQULMENZQMMMUZITSNRNTVCMDLSM4FCHWJ5SIJY", 2),
+			signer("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q", 4),
 		}
 		summary := account.SignerSummary()
 		for _, signer := range account.Signers {

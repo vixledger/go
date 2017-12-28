@@ -218,7 +218,7 @@ func NewPublicKey(aType PublicKeyType, value interface{}) (result PublicKey, err
 }
 
 // MustEd25519 retrieves the Ed25519 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u PublicKey) MustEd25519() Uint256 {
 	val, ok := u.GetEd25519()
 
@@ -312,7 +312,7 @@ func NewSignerKey(aType SignerKeyType, value interface{}) (result SignerKey, err
 }
 
 // MustEd25519 retrieves the Ed25519 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u SignerKey) MustEd25519() Uint256 {
 	val, ok := u.GetEd25519()
 
@@ -337,7 +337,7 @@ func (u SignerKey) GetEd25519() (result Uint256, ok bool) {
 }
 
 // MustPreAuthTx retrieves the PreAuthTx value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u SignerKey) MustPreAuthTx() Uint256 {
 	val, ok := u.GetPreAuthTx()
 
@@ -362,7 +362,7 @@ func (u SignerKey) GetPreAuthTx() (result Uint256, ok bool) {
 }
 
 // MustHashX retrieves the HashX value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u SignerKey) MustHashX() Uint256 {
 	val, ok := u.GetHashX()
 
@@ -434,7 +434,7 @@ func NewNodeId(aType PublicKeyType, value interface{}) (result NodeId, err error
 }
 
 // MustEd25519 retrieves the Ed25519 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u NodeId) MustEd25519() Uint256 {
 	return PublicKey(u).MustEd25519()
 }
@@ -511,7 +511,7 @@ func NewAccountId(aType PublicKeyType, value interface{}) (result AccountId, err
 }
 
 // MustEd25519 retrieves the Ed25519 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u AccountId) MustEd25519() Uint256 {
 	return PublicKey(u).MustEd25519()
 }
@@ -703,7 +703,7 @@ func NewAsset(aType AssetType, value interface{}) (result Asset, err error) {
 }
 
 // MustAlphaNum4 retrieves the AlphaNum4 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Asset) MustAlphaNum4() AssetAlphaNum4 {
 	val, ok := u.GetAlphaNum4()
 
@@ -728,7 +728,7 @@ func (u Asset) GetAlphaNum4() (result AssetAlphaNum4, ok bool) {
 }
 
 // MustAlphaNum12 retrieves the AlphaNum12 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Asset) MustAlphaNum12() AssetAlphaNum12 {
 	val, ok := u.GetAlphaNum12()
 
@@ -1323,7 +1323,7 @@ func NewLedgerEntryData(aType LedgerEntryType, value interface{}) (result Ledger
 }
 
 // MustAccount retrieves the Account value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryData) MustAccount() AccountEntry {
 	val, ok := u.GetAccount()
 
@@ -1348,7 +1348,7 @@ func (u LedgerEntryData) GetAccount() (result AccountEntry, ok bool) {
 }
 
 // MustTrustLine retrieves the TrustLine value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryData) MustTrustLine() TrustLineEntry {
 	val, ok := u.GetTrustLine()
 
@@ -1373,7 +1373,7 @@ func (u LedgerEntryData) GetTrustLine() (result TrustLineEntry, ok bool) {
 }
 
 // MustOffer retrieves the Offer value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryData) MustOffer() OfferEntry {
 	val, ok := u.GetOffer()
 
@@ -1398,7 +1398,7 @@ func (u LedgerEntryData) GetOffer() (result OfferEntry, ok bool) {
 }
 
 // MustData retrieves the Data value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryData) MustData() DataEntry {
 	val, ok := u.GetData()
 
@@ -1787,7 +1787,7 @@ func NewAllowTrustOpAsset(aType AssetType, value interface{}) (result AllowTrust
 }
 
 // MustAssetCode4 retrieves the AssetCode4 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u AllowTrustOpAsset) MustAssetCode4() [4]byte {
 	val, ok := u.GetAssetCode4()
 
@@ -1812,7 +1812,7 @@ func (u AllowTrustOpAsset) GetAssetCode4() (result [4]byte, ok bool) {
 }
 
 // MustAssetCode12 retrieves the AssetCode12 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u AllowTrustOpAsset) MustAssetCode12() [12]byte {
 	val, ok := u.GetAssetCode12()
 
@@ -2030,7 +2030,7 @@ func NewOperationBody(aType OperationType, value interface{}) (result OperationB
 }
 
 // MustCreateAccountOp retrieves the CreateAccountOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustCreateAccountOp() CreateAccountOp {
 	val, ok := u.GetCreateAccountOp()
 
@@ -2055,7 +2055,7 @@ func (u OperationBody) GetCreateAccountOp() (result CreateAccountOp, ok bool) {
 }
 
 // MustPaymentOp retrieves the PaymentOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustPaymentOp() PaymentOp {
 	val, ok := u.GetPaymentOp()
 
@@ -2080,7 +2080,7 @@ func (u OperationBody) GetPaymentOp() (result PaymentOp, ok bool) {
 }
 
 // MustPathPaymentOp retrieves the PathPaymentOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustPathPaymentOp() PathPaymentOp {
 	val, ok := u.GetPathPaymentOp()
 
@@ -2105,7 +2105,7 @@ func (u OperationBody) GetPathPaymentOp() (result PathPaymentOp, ok bool) {
 }
 
 // MustManageOfferOp retrieves the ManageOfferOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustManageOfferOp() ManageOfferOp {
 	val, ok := u.GetManageOfferOp()
 
@@ -2130,7 +2130,7 @@ func (u OperationBody) GetManageOfferOp() (result ManageOfferOp, ok bool) {
 }
 
 // MustCreatePassiveOfferOp retrieves the CreatePassiveOfferOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustCreatePassiveOfferOp() CreatePassiveOfferOp {
 	val, ok := u.GetCreatePassiveOfferOp()
 
@@ -2155,7 +2155,7 @@ func (u OperationBody) GetCreatePassiveOfferOp() (result CreatePassiveOfferOp, o
 }
 
 // MustSetOptionsOp retrieves the SetOptionsOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustSetOptionsOp() SetOptionsOp {
 	val, ok := u.GetSetOptionsOp()
 
@@ -2180,7 +2180,7 @@ func (u OperationBody) GetSetOptionsOp() (result SetOptionsOp, ok bool) {
 }
 
 // MustChangeTrustOp retrieves the ChangeTrustOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustChangeTrustOp() ChangeTrustOp {
 	val, ok := u.GetChangeTrustOp()
 
@@ -2205,7 +2205,7 @@ func (u OperationBody) GetChangeTrustOp() (result ChangeTrustOp, ok bool) {
 }
 
 // MustAllowTrustOp retrieves the AllowTrustOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustAllowTrustOp() AllowTrustOp {
 	val, ok := u.GetAllowTrustOp()
 
@@ -2230,7 +2230,7 @@ func (u OperationBody) GetAllowTrustOp() (result AllowTrustOp, ok bool) {
 }
 
 // MustDestination retrieves the Destination value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustDestination() AccountId {
 	val, ok := u.GetDestination()
 
@@ -2255,7 +2255,7 @@ func (u OperationBody) GetDestination() (result AccountId, ok bool) {
 }
 
 // MustManageDataOp retrieves the ManageDataOp value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationBody) MustManageDataOp() ManageDataOp {
 	val, ok := u.GetManageDataOp()
 
@@ -2445,7 +2445,7 @@ func NewMemo(aType MemoType, value interface{}) (result Memo, err error) {
 }
 
 // MustText retrieves the Text value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Memo) MustText() string {
 	val, ok := u.GetText()
 
@@ -2470,7 +2470,7 @@ func (u Memo) GetText() (result string, ok bool) {
 }
 
 // MustId retrieves the Id value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Memo) MustId() Uint64 {
 	val, ok := u.GetId()
 
@@ -2495,7 +2495,7 @@ func (u Memo) GetId() (result Uint64, ok bool) {
 }
 
 // MustHash retrieves the Hash value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Memo) MustHash() Hash {
 	val, ok := u.GetHash()
 
@@ -2520,7 +2520,7 @@ func (u Memo) GetHash() (result Hash, ok bool) {
 }
 
 // MustRetHash retrieves the RetHash value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u Memo) MustRetHash() Hash {
 	val, ok := u.GetRetHash()
 
@@ -2674,7 +2674,7 @@ func NewTransactionSignaturePayloadTaggedTransaction(aType EnvelopeType, value i
 }
 
 // MustTx retrieves the Tx value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u TransactionSignaturePayloadTaggedTransaction) MustTx() Transaction {
 	val, ok := u.GetTx()
 
@@ -3100,7 +3100,7 @@ func NewPathPaymentResult(code PathPaymentResultCode, value interface{}) (result
 }
 
 // MustSuccess retrieves the Success value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u PathPaymentResult) MustSuccess() PathPaymentResultSuccess {
 	val, ok := u.GetSuccess()
 
@@ -3125,7 +3125,7 @@ func (u PathPaymentResult) GetSuccess() (result PathPaymentResultSuccess, ok boo
 }
 
 // MustNoIssuer retrieves the NoIssuer value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u PathPaymentResult) MustNoIssuer() Asset {
 	val, ok := u.GetNoIssuer()
 
@@ -3314,7 +3314,7 @@ func NewManageOfferSuccessResultOffer(effect ManageOfferEffect, value interface{
 }
 
 // MustOffer retrieves the Offer value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ManageOfferSuccessResultOffer) MustOffer() OfferEntry {
 	val, ok := u.GetOffer()
 
@@ -3408,7 +3408,7 @@ func NewManageOfferResult(code ManageOfferResultCode, value interface{}) (result
 }
 
 // MustSuccess retrieves the Success value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ManageOfferResult) MustSuccess() ManageOfferSuccessResult {
 	val, ok := u.GetSuccess()
 
@@ -3802,7 +3802,7 @@ func NewAccountMergeResult(code AccountMergeResultCode, value interface{}) (resu
 }
 
 // MustSourceAccountBalance retrieves the SourceAccountBalance value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u AccountMergeResult) MustSourceAccountBalance() Int64 {
 	val, ok := u.GetSourceAccountBalance()
 
@@ -3921,7 +3921,7 @@ func NewInflationResult(code InflationResultCode, value interface{}) (result Inf
 }
 
 // MustPayouts retrieves the Payouts value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u InflationResult) MustPayouts() []InflationPayout {
 	val, ok := u.GetPayouts()
 
@@ -4230,7 +4230,7 @@ func NewOperationResultTr(aType OperationType, value interface{}) (result Operat
 }
 
 // MustCreateAccountResult retrieves the CreateAccountResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustCreateAccountResult() CreateAccountResult {
 	val, ok := u.GetCreateAccountResult()
 
@@ -4255,7 +4255,7 @@ func (u OperationResultTr) GetCreateAccountResult() (result CreateAccountResult,
 }
 
 // MustPaymentResult retrieves the PaymentResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustPaymentResult() PaymentResult {
 	val, ok := u.GetPaymentResult()
 
@@ -4280,7 +4280,7 @@ func (u OperationResultTr) GetPaymentResult() (result PaymentResult, ok bool) {
 }
 
 // MustPathPaymentResult retrieves the PathPaymentResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustPathPaymentResult() PathPaymentResult {
 	val, ok := u.GetPathPaymentResult()
 
@@ -4305,7 +4305,7 @@ func (u OperationResultTr) GetPathPaymentResult() (result PathPaymentResult, ok 
 }
 
 // MustManageOfferResult retrieves the ManageOfferResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustManageOfferResult() ManageOfferResult {
 	val, ok := u.GetManageOfferResult()
 
@@ -4330,7 +4330,7 @@ func (u OperationResultTr) GetManageOfferResult() (result ManageOfferResult, ok 
 }
 
 // MustCreatePassiveOfferResult retrieves the CreatePassiveOfferResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustCreatePassiveOfferResult() ManageOfferResult {
 	val, ok := u.GetCreatePassiveOfferResult()
 
@@ -4355,7 +4355,7 @@ func (u OperationResultTr) GetCreatePassiveOfferResult() (result ManageOfferResu
 }
 
 // MustSetOptionsResult retrieves the SetOptionsResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustSetOptionsResult() SetOptionsResult {
 	val, ok := u.GetSetOptionsResult()
 
@@ -4380,7 +4380,7 @@ func (u OperationResultTr) GetSetOptionsResult() (result SetOptionsResult, ok bo
 }
 
 // MustChangeTrustResult retrieves the ChangeTrustResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustChangeTrustResult() ChangeTrustResult {
 	val, ok := u.GetChangeTrustResult()
 
@@ -4405,7 +4405,7 @@ func (u OperationResultTr) GetChangeTrustResult() (result ChangeTrustResult, ok 
 }
 
 // MustAllowTrustResult retrieves the AllowTrustResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustAllowTrustResult() AllowTrustResult {
 	val, ok := u.GetAllowTrustResult()
 
@@ -4430,7 +4430,7 @@ func (u OperationResultTr) GetAllowTrustResult() (result AllowTrustResult, ok bo
 }
 
 // MustAccountMergeResult retrieves the AccountMergeResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustAccountMergeResult() AccountMergeResult {
 	val, ok := u.GetAccountMergeResult()
 
@@ -4455,7 +4455,7 @@ func (u OperationResultTr) GetAccountMergeResult() (result AccountMergeResult, o
 }
 
 // MustInflationResult retrieves the InflationResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustInflationResult() InflationResult {
 	val, ok := u.GetInflationResult()
 
@@ -4480,7 +4480,7 @@ func (u OperationResultTr) GetInflationResult() (result InflationResult, ok bool
 }
 
 // MustManageDataResult retrieves the ManageDataResult value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResultTr) MustManageDataResult() ManageDataResult {
 	val, ok := u.GetManageDataResult()
 
@@ -4576,7 +4576,7 @@ func NewOperationResult(code OperationResultCode, value interface{}) (result Ope
 }
 
 // MustTr retrieves the Tr value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u OperationResult) MustTr() OperationResultTr {
 	val, ok := u.GetTr()
 
@@ -4724,7 +4724,7 @@ func NewTransactionResultResult(code TransactionResultCode, value interface{}) (
 }
 
 // MustResults retrieves the Results value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u TransactionResultResult) MustResults() []OperationResult {
 	val, ok := u.GetResults()
 
@@ -5096,7 +5096,7 @@ func NewLedgerUpgrade(aType LedgerUpgradeType, value interface{}) (result Ledger
 }
 
 // MustNewLedgerVersion retrieves the NewLedgerVersion value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerUpgrade) MustNewLedgerVersion() Uint32 {
 	val, ok := u.GetNewLedgerVersion()
 
@@ -5121,7 +5121,7 @@ func (u LedgerUpgrade) GetNewLedgerVersion() (result Uint32, ok bool) {
 }
 
 // MustNewBaseFee retrieves the NewBaseFee value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerUpgrade) MustNewBaseFee() Uint32 {
 	val, ok := u.GetNewBaseFee()
 
@@ -5146,7 +5146,7 @@ func (u LedgerUpgrade) GetNewBaseFee() (result Uint32, ok bool) {
 }
 
 // MustNewMaxTxSetSize retrieves the NewMaxTxSetSize value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerUpgrade) MustNewMaxTxSetSize() Uint32 {
 	val, ok := u.GetNewMaxTxSetSize()
 
@@ -5171,7 +5171,7 @@ func (u LedgerUpgrade) GetNewMaxTxSetSize() (result Uint32, ok bool) {
 }
 
 // MustNewBaseReserve retrieves the NewBaseReserve value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerUpgrade) MustNewBaseReserve() Uint32 {
 	val, ok := u.GetNewBaseReserve()
 
@@ -5335,7 +5335,7 @@ func NewLedgerKey(aType LedgerEntryType, value interface{}) (result LedgerKey, e
 }
 
 // MustAccount retrieves the Account value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerKey) MustAccount() LedgerKeyAccount {
 	val, ok := u.GetAccount()
 
@@ -5360,7 +5360,7 @@ func (u LedgerKey) GetAccount() (result LedgerKeyAccount, ok bool) {
 }
 
 // MustTrustLine retrieves the TrustLine value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerKey) MustTrustLine() LedgerKeyTrustLine {
 	val, ok := u.GetTrustLine()
 
@@ -5385,7 +5385,7 @@ func (u LedgerKey) GetTrustLine() (result LedgerKeyTrustLine, ok bool) {
 }
 
 // MustOffer retrieves the Offer value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerKey) MustOffer() LedgerKeyOffer {
 	val, ok := u.GetOffer()
 
@@ -5410,7 +5410,7 @@ func (u LedgerKey) GetOffer() (result LedgerKeyOffer, ok bool) {
 }
 
 // MustData retrieves the Data value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerKey) MustData() LedgerKeyData {
 	val, ok := u.GetData()
 
@@ -5523,7 +5523,7 @@ func NewBucketEntry(aType BucketEntryType, value interface{}) (result BucketEntr
 }
 
 // MustLiveEntry retrieves the LiveEntry value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u BucketEntry) MustLiveEntry() LedgerEntry {
 	val, ok := u.GetLiveEntry()
 
@@ -5548,7 +5548,7 @@ func (u BucketEntry) GetLiveEntry() (result LedgerEntry, ok bool) {
 }
 
 // MustDeadEntry retrieves the DeadEntry value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u BucketEntry) MustDeadEntry() LedgerKey {
 	val, ok := u.GetDeadEntry()
 
@@ -5842,7 +5842,7 @@ func NewScpHistoryEntry(v int32, value interface{}) (result ScpHistoryEntry, err
 }
 
 // MustV0 retrieves the V0 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ScpHistoryEntry) MustV0() ScpHistoryEntryV0 {
 	val, ok := u.GetV0()
 
@@ -5984,7 +5984,7 @@ func NewLedgerEntryChange(aType LedgerEntryChangeType, value interface{}) (resul
 }
 
 // MustCreated retrieves the Created value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryChange) MustCreated() LedgerEntry {
 	val, ok := u.GetCreated()
 
@@ -6009,7 +6009,7 @@ func (u LedgerEntryChange) GetCreated() (result LedgerEntry, ok bool) {
 }
 
 // MustUpdated retrieves the Updated value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryChange) MustUpdated() LedgerEntry {
 	val, ok := u.GetUpdated()
 
@@ -6034,7 +6034,7 @@ func (u LedgerEntryChange) GetUpdated() (result LedgerEntry, ok bool) {
 }
 
 // MustRemoved retrieves the Removed value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryChange) MustRemoved() LedgerKey {
 	val, ok := u.GetRemoved()
 
@@ -6059,7 +6059,7 @@ func (u LedgerEntryChange) GetRemoved() (result LedgerKey, ok bool) {
 }
 
 // MustState retrieves the State value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u LedgerEntryChange) MustState() LedgerEntry {
 	val, ok := u.GetState()
 
@@ -6143,7 +6143,7 @@ func NewTransactionMeta(v int32, value interface{}) (result TransactionMeta, err
 }
 
 // MustOperations retrieves the Operations value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u TransactionMeta) MustOperations() []OperationMeta {
 	val, ok := u.GetOperations()
 
@@ -6360,7 +6360,7 @@ func NewPeerAddressIp(aType IpAddrType, value interface{}) (result PeerAddressIp
 }
 
 // MustIpv4 retrieves the Ipv4 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u PeerAddressIp) MustIpv4() [4]byte {
 	val, ok := u.GetIpv4()
 
@@ -6385,7 +6385,7 @@ func (u PeerAddressIp) GetIpv4() (result [4]byte, ok bool) {
 }
 
 // MustIpv6 retrieves the Ipv6 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u PeerAddressIp) MustIpv6() [16]byte {
 	val, ok := u.GetIpv6()
 
@@ -6698,7 +6698,7 @@ func NewVixalMessage(aType MessageType, value interface{}) (result VixalMessage,
 }
 
 // MustError retrieves the Error value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustError() Error {
 	val, ok := u.GetError()
 
@@ -6723,7 +6723,7 @@ func (u VixalMessage) GetError() (result Error, ok bool) {
 }
 
 // MustHello retrieves the Hello value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustHello() Hello {
 	val, ok := u.GetHello()
 
@@ -6748,7 +6748,7 @@ func (u VixalMessage) GetHello() (result Hello, ok bool) {
 }
 
 // MustAuth retrieves the Auth value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustAuth() Auth {
 	val, ok := u.GetAuth()
 
@@ -6773,7 +6773,7 @@ func (u VixalMessage) GetAuth() (result Auth, ok bool) {
 }
 
 // MustDontHave retrieves the DontHave value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustDontHave() DontHave {
 	val, ok := u.GetDontHave()
 
@@ -6798,7 +6798,7 @@ func (u VixalMessage) GetDontHave() (result DontHave, ok bool) {
 }
 
 // MustPeers retrieves the Peers value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustPeers() []PeerAddress {
 	val, ok := u.GetPeers()
 
@@ -6823,7 +6823,7 @@ func (u VixalMessage) GetPeers() (result []PeerAddress, ok bool) {
 }
 
 // MustTxSetHash retrieves the TxSetHash value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustTxSetHash() Uint256 {
 	val, ok := u.GetTxSetHash()
 
@@ -6848,7 +6848,7 @@ func (u VixalMessage) GetTxSetHash() (result Uint256, ok bool) {
 }
 
 // MustTxSet retrieves the TxSet value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustTxSet() TransactionSet {
 	val, ok := u.GetTxSet()
 
@@ -6873,7 +6873,7 @@ func (u VixalMessage) GetTxSet() (result TransactionSet, ok bool) {
 }
 
 // MustTransaction retrieves the Transaction value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustTransaction() TransactionEnvelope {
 	val, ok := u.GetTransaction()
 
@@ -6898,7 +6898,7 @@ func (u VixalMessage) GetTransaction() (result TransactionEnvelope, ok bool) {
 }
 
 // MustQSetHash retrieves the QSetHash value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustQSetHash() Uint256 {
 	val, ok := u.GetQSetHash()
 
@@ -6923,7 +6923,7 @@ func (u VixalMessage) GetQSetHash() (result Uint256, ok bool) {
 }
 
 // MustQSet retrieves the QSet value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustQSet() ScpQuorumSet {
 	val, ok := u.GetQSet()
 
@@ -6948,7 +6948,7 @@ func (u VixalMessage) GetQSet() (result ScpQuorumSet, ok bool) {
 }
 
 // MustEnvelope retrieves the Envelope value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustEnvelope() ScpEnvelope {
 	val, ok := u.GetEnvelope()
 
@@ -6973,7 +6973,7 @@ func (u VixalMessage) GetEnvelope() (result ScpEnvelope, ok bool) {
 }
 
 // MustGetScpLedgerSeq retrieves the GetScpLedgerSeq value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u VixalMessage) MustGetScpLedgerSeq() Uint32 {
 	val, ok := u.GetGetScpLedgerSeq()
 
@@ -7059,7 +7059,7 @@ func NewAuthenticatedMessage(v Uint32, value interface{}) (result AuthenticatedM
 }
 
 // MustV0 retrieves the V0 value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u AuthenticatedMessage) MustV0() AuthenticatedMessageV0 {
 	val, ok := u.GetV0()
 
@@ -7302,7 +7302,7 @@ func NewScpStatementPledges(aType ScpStatementType, value interface{}) (result S
 }
 
 // MustPrepare retrieves the Prepare value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ScpStatementPledges) MustPrepare() ScpStatementPrepare {
 	val, ok := u.GetPrepare()
 
@@ -7327,7 +7327,7 @@ func (u ScpStatementPledges) GetPrepare() (result ScpStatementPrepare, ok bool) 
 }
 
 // MustConfirm retrieves the Confirm value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ScpStatementPledges) MustConfirm() ScpStatementConfirm {
 	val, ok := u.GetConfirm()
 
@@ -7352,7 +7352,7 @@ func (u ScpStatementPledges) GetConfirm() (result ScpStatementConfirm, ok bool) 
 }
 
 // MustExternalize retrieves the Externalize value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ScpStatementPledges) MustExternalize() ScpStatementExternalize {
 	val, ok := u.GetExternalize()
 
@@ -7377,7 +7377,7 @@ func (u ScpStatementPledges) GetExternalize() (result ScpStatementExternalize, o
 }
 
 // MustNominate retrieves the Nominate value from the union,
-// panicing if the value is not set.
+// panicking if the value is not set.
 func (u ScpStatementPledges) MustNominate() ScpNomination {
 	val, ok := u.GetNominate()
 

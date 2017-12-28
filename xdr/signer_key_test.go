@@ -15,7 +15,7 @@ func TestSignerKey_SetAddress(t *testing.T) {
 
 		{
 			Name:    "AccountID",
-			Address: "GA3D5KRYM6CB7OWQ6TWYRR3Z4T7GNZLKERYNZGGA5SOAOPIFY6YQHES5",
+			Address: "GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q",
 		},
 		{
 			Name:    "HashTx",

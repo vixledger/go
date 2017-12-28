@@ -8,7 +8,7 @@ import (
 )
 
 // Address returns the strkey encoded form of this AccountId.  This method will
-// panic if the accountid is backed by a public key of an unknown type.
+// panic if the accountId is backed by a public key of an unknown type.
 func (aid *AccountId) Address() string {
 	if aid == nil {
 		return ""

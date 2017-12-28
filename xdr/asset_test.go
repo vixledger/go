@@ -36,7 +36,7 @@ var _ = Describe("xdr.Asset#Extract()", func() {
 		BeforeEach(func() {
 			var err error
 			an := AssetAlphaNum4{}
-			err = an.Issuer.SetAddress("GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H")
+			err = an.Issuer.SetAddress("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q")
 			Expect(err).To(BeNil())
 			copy(an.AssetCode[:], []byte("USD"))
 
@@ -52,7 +52,7 @@ var _ = Describe("xdr.Asset#Extract()", func() {
 			Expect(err).To(BeNil())
 			Expect(typ).To(Equal(AssetTypeAssetTypeCreditAlphanum4))
 			Expect(code).To(Equal("USD"))
-			Expect(issuer).To(Equal("GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H"))
+			Expect(issuer).To(Equal("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q"))
 		})
 
 		It("can extract to strings", func() {
@@ -62,7 +62,7 @@ var _ = Describe("xdr.Asset#Extract()", func() {
 			Expect(err).To(BeNil())
 			Expect(typ).To(Equal("credit_alphanum4"))
 			Expect(code).To(Equal("USD"))
-			Expect(issuer).To(Equal("GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H"))
+			Expect(issuer).To(Equal("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q"))
 		})
 
 	})
@@ -87,7 +87,7 @@ var _ = Describe("xdr.Asset#String()", func() {
 		BeforeEach(func() {
 			var err error
 			an := AssetAlphaNum4{}
-			err = an.Issuer.SetAddress("GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H")
+			err = an.Issuer.SetAddress("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q")
 			Expect(err).To(BeNil())
 			copy(an.AssetCode[:], []byte("USD"))
 
@@ -96,7 +96,7 @@ var _ = Describe("xdr.Asset#String()", func() {
 		})
 
 		It("returns 'type/code/issuer'", func() {
-			Expect(asset.String()).To(Equal("credit_alphanum4/USD/GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H"))
+			Expect(asset.String()).To(Equal("credit_alphanum4/USD/GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q"))
 		})
 	})
 })
@@ -116,7 +116,7 @@ var _ = Describe("xdr.Asset#Equals()", func() {
 	)
 
 	BeforeEach(func() {
-		err := issuer1.SetAddress("GBRPYHIL2CI3FNQ4BXLFMNDLFJUNPU2HY3ZMFSHONUCEOASW7QC7OX2H")
+		err := issuer1.SetAddress("GCHN24SEPBQGC3JJIB2YVTT2OVPO7FHOOH5ZMOIBKS4DANTR33U7S25Q")
 		Expect(err).To(BeNil())
 		err = issuer2.SetAddress("GCCB23N7VU2U3JHZYSX7HKK6WBBUMHFP4GOXYOZDETXTICY6BR26EGJY")
 		Expect(err).To(BeNil())

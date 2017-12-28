@@ -1,5 +1,4 @@
-// Package xdr contains the generated code for parsing the xdr structures used
-// for stellar.
+// Package xdr contains the generated code for parsing the xdr structures used for vixal.
 package xdr
 
 import (

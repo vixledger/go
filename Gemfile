@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'xdrgen', github:'vixledger/xdrgen'
+gem "xdrgen", git: "https://github.com/vixledger/xdrgen.git"
 gem 'pry'
 gem 'octokit'
 gem 'netrc'
