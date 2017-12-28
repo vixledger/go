@@ -13,6 +13,7 @@ install:
 - tar -xzvf glide-v0.12.3-linux-amd64.tar.gz
 - cp linux-amd64/glide $GOPATH/bin
 script:
+- glide update
 - glide install
 - "./support/scripts/run_tests"
 before_deploy: 
