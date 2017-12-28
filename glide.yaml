@@ -22,26 +22,14 @@ import:
   subpackages:
   - hooks/test
 - package: github.com/spf13/cobra
-  version: v0.0.1
+  version: 9c28e4bbd74e5c3ed7aacbc552b2cab7cfdfe744
 - package: golang.org/x/net/context
 - package: golang.org/x/net/http2
 - package: gopkg.in/gavv/httpexpect.v1
 - package: gopkg.in/tylerb/graceful.v1
   version: v1.2.15
-testImport:
-- package: github.com/onsi/ginkgo
-  version: v1.4.0
+- package: golang.org/x/crypto
+  version: 1f22c0103821b9390939b6776727195525381532
+  repo: https://go.googlesource.com/crypto
   subpackages:
-  - extensions/table
-- package: github.com/onsi/gomega
-  version: v1.2.0
-  subpackages:
-  - types
-- package: github.com/stretchr/testify
-  subpackages:
-  - assert
-  - require
-- package: goji.io
-  version: v2.0
-  subpackages:
-  - pat
+    - ssh/terminal

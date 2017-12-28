@@ -1,5 +1,5 @@
-hash: dee3b7d9711a6a668b383696a19866bfbd8670f18e90c33488858bf565b8f7ae
-updated: 2017-12-28T14:10:40.409372+08:00
+hash: 6a1bd5f6538d46c50e4d9b6ef98b8a56df6671158f9da0ae71d49aef675884f4
+updated: 2017-12-28T14:23:21.612343+08:00
 imports:
 - name: github.com/agl/ed25519
   version: 278e1ec8e8a6e017cd07577924d6766039146ced
@@ -94,7 +94,7 @@ imports:
   subpackages:
   - hooks/test
 - name: github.com/spf13/cobra
-  version: 7b2c5ac9fc04fc5efafb60700713d4fa609b777b
+  version: 9c28e4bbd74e5c3ed7aacbc552b2cab7cfdfe744
 - name: github.com/spf13/pflag
   version: 4bd69631f4750a9df249ee317f4536e02cbc3c65
 - name: github.com/stretchr/testify
@@ -124,7 +124,8 @@ imports:
 - name: github.com/yudai/golcs
   version: d1c525dea8ce39ea9a783d33cf08932305373f2c
 - name: golang.org/x/crypto
-  version: d585fd2cc9195196078f516b69daff6744ef5e84
+  version: 1f22c0103821b9390939b6776727195525381532
+  repo: https://go.googlesource.com/crypto
   subpackages:
   - ssh/terminal
 - name: golang.org/x/net
@@ -143,7 +144,6 @@ imports:
   version: a646d33e2ee3172a661fc09bca23bb4889a41bc8
   subpackages:
   - unix
-  - windows
 - name: golang.org/x/text
   version: 1cbadb444a806fd9430d14ad08967ed91da4fa0a
   subpackages:
