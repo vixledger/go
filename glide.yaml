@@ -1,5 +1,48 @@
 package: github.com/vixledger/go
 import:
 - package: github.com/agl/ed25519
-  version: 278e1ec8e8a6e017cd07577924d6766039146ced
-  repo: https://github.com/agl/ed25519
+- package: github.com/aws/aws-sdk-go
+  version: v1.12.53
+  subpackages:
+  - aws
+  - aws/session
+  - service/s3
+- package: github.com/getsentry/raven-go
+- package: github.com/howeyc/gopass
+- package: github.com/jarcoal/httpmock
+- package: github.com/nullstyle/go-xdr
+  subpackages:
+  - xdr3
+- package: github.com/pkg/errors
+  version: v0.8.0
+- package: github.com/segmentio/go-loggly
+  version: v0.5.0
+- package: github.com/sirupsen/logrus
+  version: v1.0.4
+  subpackages:
+  - hooks/test
+- package: github.com/spf13/cobra
+  version: v0.0.1
+- package: golang.org/x/net/context
+- package: golang.org/x/net/http2
+- package: gopkg.in/gavv/httpexpect.v1
+- package: gopkg.in/tylerb/graceful.v1
+  version: v1.2.15
+testImport:
+- package: github.com/onsi/ginkgo
+  version: v1.4.0
+  subpackages:
+  - extensions/table
+- package: github.com/onsi/gomega
+  version: v1.2.0
+  subpackages:
+  - types
+- package: github.com/stretchr/testify
+  version: v1.1.4
+  subpackages:
+  - assert
+  - require
+- package: goji.io
+  version: v2.0
+  subpackages:
+  - pat
